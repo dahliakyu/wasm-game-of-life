@@ -82,6 +82,25 @@ export class Universe {
         const ret = wasm.universe_cells(this.ptr);
         return ret;
     }
+    /**
+    * @param {number} row
+    * @param {number} column
+    */
+    toggle_cell(row, column) {
+        wasm.universe_toggle_cell(this.ptr, row, column);
+    }
+    /**
+    * @param {number} width
+    */
+    set_width(width) {
+        wasm.universe_set_width(this.ptr, width);
+    }
+    /**
+    * @param {number} height
+    */
+    set_height(height) {
+        wasm.universe_set_height(this.ptr, height);
+    }
 }
 
 export const __wbg_random_afb3265527cf67c8 = typeof Math.random == 'function' ? Math.random : notDefined('Math.random');

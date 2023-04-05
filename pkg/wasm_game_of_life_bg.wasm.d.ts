@@ -7,3 +7,6 @@ export function universe_new(): number;
 export function universe_width(a: number): number;
 export function universe_height(a: number): number;
 export function universe_cells(a: number): number;
+export function universe_toggle_cell(a: number, b: number, c: number): void;
+export function universe_set_width(a: number, b: number): void;
+export function universe_set_height(a: number, b: number): void;
